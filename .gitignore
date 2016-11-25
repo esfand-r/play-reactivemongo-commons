@@ -1,0 +1,26 @@
+logs
+project/project
+target
+tmp
+dist
+/.idea
+/out
+/.idea_modules
+/.classpath
+/.project
+/RUNNING_PID
+/.settings
+/bin
+/node_modules
+
+#ruby
+.bundle
+
+#OS X
+.DS_Store
+application.home_IS_UNDEFINED/
+
+public/styles/
+public/scripts/
+public/lib/
+public/javascripts/

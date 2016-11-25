@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -o nounset -o errexit
+
+echo ""
+echo "Publish coverage report"
+scripts/sbt coveralls
+
+echo ""
+echo "Report published"
+echo ""

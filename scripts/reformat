@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -o nounset -o errexit
+
+scripts/sbt clean scalariformFormat test:scalariformFormat
