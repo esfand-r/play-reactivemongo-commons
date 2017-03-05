@@ -2,10 +2,9 @@ package io.soheila.commons.crud
 
 import grizzled.slf4j.Logger
 import io.soheila.commons.entities.{ Identity, IdentityWithAudit, Page }
-import io.soheila.commons.exceptions.{ ErrorCode, MongoDAOException, MongoExceptionBuilder }
+import io.soheila.commons.exceptions.{ MongoDAOException, MongoExceptionBuilder }
 import play.api.libs.json.{ Format, JsObject, Json }
 import reactivemongo.api._
-import reactivemongo.api.commands.LastError
 import reactivemongo.play.json._
 import reactivemongo.play.json.collection.JSONCollection
 
