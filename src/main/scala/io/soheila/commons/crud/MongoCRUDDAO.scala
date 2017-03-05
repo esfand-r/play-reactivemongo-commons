@@ -11,7 +11,7 @@ import reactivemongo.play.json.collection.JSONCollection
 import scala.concurrent.{ ExecutionContext, Future }
 
 /**
- * Abstract {{CRUDService}} impl backed by JSONCollection providing some convenience for some of DAOs.
+ * Abstract {{CRUDService}} impl backed by JSONCollection providing some convenience for DAOs.
  */
 abstract class MongoCRUDDAO[T: Format, ID: Format](
   implicit
@@ -20,14 +20,13 @@ abstract class MongoCRUDDAO[T: Format, ID: Format](
 ) extends CRUDDAO[T, ID] {
   private val logger = Logger[this.type]
 
+  def collection: Future[JSONCollection]
+
   collection onSuccess {
     case jsonCollection => indexSet.foreach(
       index => jsonCollection.indexesManager.ensure(index)
     )
   }
-
-  /** Mongo collection deserializable to [T] */
-  def collection: Future[JSONCollection]
 
   override def read(page: Int = 0, limit: Int): Future[Either[MongoDAOException, Page[T]]] = {
     require(page >= 0, s"Page must be greater or equal to 0, got $page")
