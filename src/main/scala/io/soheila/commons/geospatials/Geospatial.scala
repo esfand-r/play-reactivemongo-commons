@@ -40,7 +40,7 @@ trait Geospatial[T <: Locatable, ID] {
     val searchResult = collection.flatMap(_.find(
       Json.obj(
         LocationField -> Json.toJson(Json.obj(
-          "$near" -> Json.toJson(Json.obj(
+          "$geoNear" -> Json.toJson(Json.obj(
             "$geometry" -> Json.toJson(Json.obj(
               "type" -> "Point",
               "coordinates" -> Json.arr(lon, lat)

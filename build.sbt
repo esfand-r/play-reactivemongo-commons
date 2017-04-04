@@ -22,18 +22,18 @@ aggregate in update := false
 
 libraryDependencies ++= Seq(
   // Persistence
-  "org.reactivemongo" %% "play2-reactivemongo" % "0.12.1",
-  "com.typesafe.play" %% "play-json" % "2.5.12",
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.12.2",
+  "com.typesafe.play" %% "play-json" % "2.5.14",
   "ch.qos.logback" % "logback-classic" % "1.2.1",
   "org.slf4j" % "slf4j-simple" % "1.7.23",
   "org.clapper" %% "grizzled-slf4j" % "1.3.0",
   "com.fasterxml.uuid" % "java-uuid-generator" % "3.1.4",
   // DI
-  "net.codingwell" %% "scala-guice" % "4.0.1",
+  "net.codingwell" %% "scala-guice" % "4.1.0",
   "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.0.0" % Test,
-  "net.codingwell" %% "scala-guice" % "4.0.1" % Test,
+  "net.codingwell" %% "scala-guice" % "4.1.0" % Test,
   "org.specs2" %% "specs2-core" % "3.8.6" % "test",
-  "com.typesafe.play" % "play-specs2_2.11" % "2.5.12"
+  "com.typesafe.play" % "play-specs2_2.11" % "2.5.13"
 )
 
 lazy val `play-reactive-mongo-commons` = Project(id = "play-reactive-mongo-commons", base = file("."))
