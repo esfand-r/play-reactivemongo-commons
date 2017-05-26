@@ -14,7 +14,7 @@ homepage := Some(url("http://www.hublove.com/"))
 
 licenses := Seq("Apache2 License" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
 
-version := "0.1.0-alpha1"
+version := "0.1.0-alpha2"
 
 scalaVersion := "2.11.8"
 
@@ -22,8 +22,7 @@ aggregate in update := false
 
 libraryDependencies ++= Seq(
   // Persistence
-  "org.reactivemongo" %% "play2-reactivemongo" % "0.12.2",
-  "com.typesafe.play" %% "play-json" % "2.5.14",
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.12.3",
   "ch.qos.logback" % "logback-classic" % "1.2.1",
   "org.slf4j" % "slf4j-simple" % "1.7.23",
   "org.clapper" %% "grizzled-slf4j" % "1.3.0",
